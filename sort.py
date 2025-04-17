@@ -26,21 +26,21 @@ def merge_sort(array):
     left = merge_sort(left)
     right = merge_sort(right)
     out = list()
-    i, j, k = 0, 0, 0
+    
     while left and right:
         if left[0] < right[0]:
             out.append(left.pop(0))
         else:
             out.append(right.pop(0))
-    return out + left + right
 
+    return out + left + right
 
 if __name__ == "__main__":
     l1 = []
     l2 = [3,3,3,3]
     l3 = [1,4,5,-1,10]
     l4 = [1,1,2,-9,1.5,100]
-    
+
     print('quick sort')
     print(quick_sort(l1))
     print(quick_sort(l2))
